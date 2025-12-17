@@ -34,4 +34,4 @@ This portfolio website is built with performance and simplicity in mind:
 *   **LinkedIn:** [linkedin.com/in/cantuntas](https://www.linkedin.com/in/cantuntas)
 
 ---
-&copy; 2025 Aydın Can Tuntaş. All rights reserved.
+2025 - Aydın Can Tuntaş
