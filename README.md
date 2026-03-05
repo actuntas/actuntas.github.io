@@ -1,4 +1,4 @@
-# Aydın Can Tuntaş - Senior iOS Developer Portfolio
+# Aydın Can Tuntaş - iOS Developer Portfolio
 
 Welcome to my personal portfolio repository. This project showcases my experience in building high-performance iOS applications, particularly in the **Fintech** and **Crypto** sectors.
 
