@@ -3,34 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use - Stoic Path</title>
+    <title>Terms of Use - Stoicka</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: #f9f9f9; }
-        h1 { color: #1a1a1a; border-bottom: 2px solid #C5A059; padding-bottom: 10px; }
-        h2 { color: #8E7036; margin-top: 30px; }
+        :root {
+            --primary: #C5A059;
+            --primary-dark: #8E7036;
+            --bg: #f9f9f9;
+            --text: #333;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: var(--bg); }
+        .lang-switch { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 20px; }
+        .lang-btn { background: #eee; border: none; padding: 5px 15px; border-radius: 20px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
+        .lang-btn.active { background: var(--primary); color: white; }
+        h1 { color: #1a1a1a; border-bottom: 2px solid var(--primary); padding-bottom: 10px; }
+        h2 { color: var(--primary-dark); margin-top: 30px; }
         .footer { margin-top: 50px; font-size: 0.8em; color: #777; border-top: 1px solid #ddd; padding-top: 20px; }
+        .content-section { display: none; }
+        .content-section.active { display: block; }
     </style>
 </head>
 <body>
-    <h1>Terms of Use</h1>
-    <p>Last Updated: March 2026</p>
-    
-    <p>By using the Stoic Path app, you agree to these terms.</p>
 
-    <h2>1. General Use</h2>
-    <p>Stoic Path provides a digital platform for personal journaling, reflection, and Stoic philosophy exercises. The app is for personal, non-commercial use only.</p>
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('en')">English</button>
+        <button class="lang-btn" onclick="switchLang('tr')">Türkçe</button>
+    </div>
 
-    <h2>2. Subscription Services (Premium)</h2>
-    <p>Stoic Path offers a Premium subscription that unlocks advanced features. Subscriptions are managed by Apple's StoreKit and follow the Standard Apple Terms of Use (EULA).</p>
+    <!-- English Content -->
+    <div id="en-content" class="content-section active">
+        <h1>Terms of Use</h1>
+        <p>Last Updated: March 5, 2026</p>
+        
+        <p>Welcome to Stoicka. By using our mobile application, you agree to the following terms and conditions. Please read them carefully.</p>
 
-    <h2>3. Content Disclaimer</h2>
-    <p>The information provided in this app is for educational and self-improvement purposes. It is not a substitute for professional mental health advice or therapy.</p>
+        <h2>1. Acceptance of Terms</h2>
+        <p>By downloading or using Stoicka, these terms will automatically apply to you. If you do not agree to these terms, you should not use the application.</p>
 
-    <h2>4. Liability</h2>
-    <p>We are not responsible for any loss of data or emotional impact resulting from the use of the app. Users are encouraged to maintain their own iCloud backups.</p>
+        <h2>2. Use of Service</h2>
+        <p>Stoicka provides a platform for personal growth, mindfulness, and journaling based on Stoic philosophy. The app is for personal, non-commercial use. You agree not to misuse the service or help anyone else do so.</p>
+
+        <h2>3. Intellectual Property</h2>
+        <p>The app, including its original content, features, and functionality, are and will remain the exclusive property of Aydın Can Tuntaş. All quotes from historical Stoic figures are in the public domain or used under fair use.</p>
+
+        <h2>4. Subscriptions and Payments</h2>
+        <p>Stoicka offers a Premium subscription. Payments are handled through Apple's App Store. Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period. You can manage and cancel your subscriptions in your App Store account settings.</p>
+
+        <h2>5. Content Disclaimer</h2>
+        <p>Stoicka is an educational and self-help tool. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a mental health condition.</p>
+
+        <h2>6. Limitation of Liability</h2>
+        <p>We shall not be liable for any indirect, incidental, special, or consequential damages resulting from the use or inability to use the service.</p>
+
+        <h2>7. Governing Law</h2>
+        <p>These terms are governed by the laws of the Republic of Turkey, without regard to its conflict of law principles.</p>
+    </div>
+
+    <!-- Turkish Content -->
+    <div id="tr-content" class="content-section">
+        <h1>Kullanım Koşulları</h1>
+        <p>Son Güncelleme: 5 Mart 2026</p>
+        
+        <p>Stoicka'ya hoş geldiniz. Mobil uygulamamızı kullanarak aşağıdaki hüküm ve koşulları kabul etmiş sayılırsınız. Lütfen bunları dikkatlice okuyunuz.</p>
+
+        <h2>1. Şartların Kabulü</h2>
+        <p>Stoicka'yı indirerek veya kullanarak, bu şartlar otomatik olarak sizin için geçerli olacaktır. Bu şartları kabul etmiyorsanız, uygulamayı kullanmamalısınız.</p>
+
+        <h2>2. Hizmet Kullanımı</h2>
+        <p>Stoicka, Stoacı felsefeye dayalı kişisel gelişim, farkındalık ve günlük tutma için bir platform sağlar. Uygulama kişisel, ticari olmayan kullanım içindir. Hizmeti kötüye kullanmamayı veya başkasının bunu yapmasına yardımcı olmamayı kabul edersiniz.</p>
+
+        <h2>3. Fikri Mülkiyet</h2>
+        <p>Orijinal içeriği, özellikleri ve işlevselliği dahil olmak üzere uygulama, Aydın Can Tuntaş'ın münhasır mülkiyetindedir ve öyle kalacaktır. Tarihi Stoacı figürlerden alıntılar kamu malıdır veya adil kullanım kapsamında kullanılmaktadır.</p>
+
+        <h2>4. Abonelikler ve Ödemeler</h2>
+        <p>Stoicka, Premium abonelik sunar. Ödemeler Apple'ın App Store'u üzerinden yönetilir. Abonelikler, mevcut dönemin bitiminden en az 24 saat önce iptal edilmediği sürece otomatik olarak yenilenir. Aboneliklerinizi App Store hesap ayarlarınızdan yönetebilir ve iptal edebilirsiniz.</p>
+
+        <h2>5. İçerik Sorumluluk Reddi</h2>
+        <p>Stoicka bir eğitim ve kişisel gelişim aracıdır. Profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini alması amaçlanmamıştır. Ruh sağlığı durumunuzla ilgili her türlü sorunuz için daima doktorunuzun veya diğer kalifiye sağlık uzmanınızın tavsiyesine başvurun.</p>
+
+        <h2>6. Sorumluluğun Sınırlandırılması</h2>
+        <p>Hizmetin kullanılmasından veya kullanılamamasından kaynaklanan dolaylı, arızi, özel veya sonuçsal zararlardan sorumlu olmayacağız.</p>
+
+        <h2>7. Uygulanacak Hukuk</h2>
+        <p>Bu şartlar, kanunlar ihtilafı ilkelerine bakılmaksızın Türkiye Cumhuriyeti kanunlarına tabidir.</p>
+    </div>
 
     <div class="footer">
-        <p>&copy; 2026 Stoic Path. Contact: actuntas@github.io</p>
+        <p>&copy; 2026 Stoicka. Contact: actuntas@gmail.com</p>
+        <p><a href="index.html" style="color: var(--primary-dark); text-decoration: none;">&larr; Back to Website</a></p>
     </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById(lang + '-content').classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>

@@ -3,34 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Stoic Path</title>
+    <title>Privacy Policy - Stoicka</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: #f9f9f9; }
-        h1 { color: #1a1a1a; border-bottom: 2px solid #C5A059; padding-bottom: 10px; }
-        h2 { color: #8E7036; margin-top: 30px; }
+        :root {
+            --primary: #C5A059;
+            --primary-dark: #8E7036;
+            --bg: #f9f9f9;
+            --text: #333;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: var(--bg); }
+        .lang-switch { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 20px; }
+        .lang-btn { background: #eee; border: none; padding: 5px 15px; border-radius: 20px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
+        .lang-btn.active { background: var(--primary); color: white; }
+        h1 { color: #1a1a1a; border-bottom: 2px solid var(--primary); padding-bottom: 10px; }
+        h2 { color: var(--primary-dark); margin-top: 30px; }
         .footer { margin-top: 50px; font-size: 0.8em; color: #777; border-top: 1px solid #ddd; padding-top: 20px; }
+        .content-section { display: none; }
+        .content-section.active { display: block; }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p>Last Updated: March 2026</p>
-    
-    <p>Stoic Path ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how your information is collected, used, and safeguarded when you use our mobile application.</p>
 
-    <h2>1. Data Collection & CloudKit</h2>
-    <p>Stoic Path uses Apple's <strong>CloudKit</strong> to synchronize your data (reflections, journal entries, and progress) across your personal devices. This data is stored securely in your private iCloud database. We do not have access to your private iCloud data.</p>
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('en')">English</button>
+        <button class="lang-btn" onclick="switchLang('tr')">Türkçe</button>
+    </div>
 
-    <h2>2. Firebase Analytics</h2>
-    <p>We use Firebase Analytics to collect anonymous usage data to improve the app's performance and user experience. This includes information like feature usage frequency and app crashes. No personally identifiable information (PII) is sent to Firebase.</p>
+    <!-- English Content -->
+    <div id="en-content" class="content-section active">
+        <h1>Privacy Policy</h1>
+        <p>Last Updated: March 5, 2026</p>
+        
+        <p>Stoicka ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how your information is collected, used, and safeguarded when you use our mobile application.</p>
 
-    <h2>3. Third-Party Services</h2>
-    <p>The app integrates with Apple's <strong>StoreKit</strong> for processing subscriptions. Payment information is handled exclusively by Apple and is subject to Apple's privacy policy.</p>
+        <h2>1. Personal Data and CloudKit</h2>
+        <p>Stoicka is designed with privacy as a core principle. We use Apple's <strong>CloudKit</strong> technology to synchronize your reflections, journal entries, and app settings across your personal devices. 
+        All this data is stored in your <strong>private iCloud database</strong>. We do not have access to your private iCloud data, and we do not store any of your personal journal entries on our own servers.</p>
 
-    <h2>4. Your Choices</h2>
-    <p>You can delete all your data at any time through the app's Settings menu. Since data is stored in your iCloud, you also have full control over it through your iOS device settings.</p>
+        <h2>2. Anonymous Usage Data (Firebase)</h2>
+        <p>We use Firebase Analytics (a service provided by Google) to collect anonymous information about how the app is used. This helps us identify bugs and understand which features are most helpful. This data is aggregated and does not contain any personally identifiable information (PII).</p>
+
+        <h2>3. In-App Purchases (StoreKit)</h2>
+        <p>All financial transactions for Premium features are processed through Apple's App Store via StoreKit. We do not collect or store your credit card or payment information. Your purchase history is linked to your Apple ID.</p>
+
+        <h2>4. Data Retention and Deletion</h2>
+        <p>Since your data is stored in your private iCloud, you have full control over it. You can delete your data directly from the app's settings or by managing your iCloud storage in your iOS device settings.</p>
+
+        <h2>5. Changes to This Policy</h2>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at: actuntas@gmail.com</p>
+    </div>
+
+    <!-- Turkish Content -->
+    <div id="tr-content" class="content-section">
+        <h1>Gizlilik Politikası</h1>
+        <p>Son Güncelleme: 5 Mart 2026</p>
+        
+        <p>Stoicka ("biz", "bizim" veya "bize"), gizliliğinizi korumayı taahhüt eder. Bu Gizlilik Politikası, mobil uygulamamızı kullandığınızda bilgilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar.</p>
+
+        <h2>1. Kişisel Veriler ve CloudKit</h2>
+        <p>Stoicka, gizlilik temel prensibiyle tasarlanmıştır. Yansımalarınızı, günlük girişlerinizi ve uygulama ayarlarınızı kişisel cihazlarınız arasında senkronize etmek için Apple'ın <strong>CloudKit</strong> teknolojisini kullanıyoruz.
+        Tüm bu veriler <strong>özel iCloud veritabanınızda</strong> saklanır. Özel iCloud verilerinize erişimimiz yoktur ve kişisel günlük girişlerinizin hiçbirini kendi sunucularımızda saklamıyoruz.</p>
+
+        <h2>2. Anonim Kullanım Verileri (Firebase)</h2>
+        <p>Uygulamanın nasıl kullanıldığına dair anonim bilgiler toplamak için Firebase Analytics (Google tarafından sağlanan bir hizmet) kullanıyoruz. Bu, hataları tespit etmemize ve hangi özelliklerin en yararlı olduğunu anlamamıza yardımcı olur. Bu veriler toplu haldedir ve kişisel olarak tanımlanabilir bilgiler (PII) içermez.</p>
+
+        <h2>3. Uygulama İçi Satın Almalar (StoreKit)</h2>
+        <p>Premium özellikler için tüm finansal işlemler StoreKit aracılığıyla Apple'ın App Store'u üzerinden gerçekleştirilir. Kredi kartı veya ödeme bilgilerinizi toplamıyoruz veya saklamıyoruz. Satın alma geçmişiniz Apple Kimliğinize bağlıdır.</p>
+
+        <h2>4. Veri Saklama ve Silme</h2>
+        <p>Verileriniz özel iCloud'unuzda saklandığı için bunlar üzerinde tam kontrole sahipsiniz. Verilerinizi doğrudan uygulamanın ayarlarından veya iOS cihaz ayarlarınızdaki iCloud saklama alanını yöneterek silebilirsiniz.</p>
+
+        <h2>5. Bu Politikadaki Değişiklikler</h2>
+        <p>Gizlilik Politikamızı zaman zaman güncelleyebiliriz. Herhangi bir değişikliği bu sayfada yeni Gizlilik Politikasını yayınlayarak size bildireceğiz.</p>
+
+        <h2>6. İletişim</h2>
+        <p>Bu Gizlilik Politikası hakkında herhangi bir sorunuz varsa, lütfen bizimle iletişime geçin: actuntas@gmail.com</p>
+    </div>
 
     <div class="footer">
-        <p>&copy; 2026 Stoic Path. Contact: actuntas@github.io</p>
+        <p>&copy; 2026 Stoicka. Contact: actuntas@gmail.com</p>
+        <p><a href="index.html" style="color: var(--primary-dark); text-decoration: none;">&larr; Back to Website</a></p>
     </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById(lang + '-content').classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
