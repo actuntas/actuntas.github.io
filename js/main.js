@@ -1,6 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Project Data Configuration
     const projectData = {
+        stoicka: {
+            name: 'Stoicka: Daily Reflection',
+            images: [
+                'assets/Stoicka/Stoicka_AppStore_en_01.png',
+                'assets/Stoicka/Stoicka_AppStore_en_03.png',
+                'assets/Stoicka/Stoicka_AppStore_en_04.png',
+                'assets/Stoicka/Stoicka_AppStore_en_05.png',
+                'assets/Stoicka/Stoicka_AppStore_en_06.png',
+                'assets/Stoicka/Stoicka_AppStore_en_07.png',
+                'assets/Stoicka/Stoicka_AppStore_en_08.png',
+                'assets/Stoicka/Stoicka_AppStore_en_09.png',
+                'assets/Stoicka/Stoicka_AppStore_en_10.png'
+            ]
+        },
         coino: {
             name: 'Coino - Crypto Exchange',
             images: [
