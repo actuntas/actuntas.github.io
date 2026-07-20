@@ -150,10 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
         sections.forEach(sec => navObserver.observe(sec));
     }
 
-    /* ---------- Current year ---------- */
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-
     closeModalButton.addEventListener('click', closeModal);
 
     // Close modal when clicking outside the content
