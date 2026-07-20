@@ -1,10 +1,10 @@
 # Aydın Can Tuntaş
 
 Senior iOS developer, based in İzmir. I've spent the last 6 years mostly around fintech
-and crypto — the kind of apps where a crash costs someone money, so stability matters.
+and crypto the kind of apps where stability matters.
 
 Some of what I've worked on: rebuilding ICRYPEX's exchange app from Objective-C to
-SwiftUI, taking over CoinO's messy legacy codebase and getting it to 99%+ crash-free,
+SwiftUI, taking over CoinO's legacy codebase and getting it to 99%+ crash-free,
 an onboarding SDK for Trive, and the Kassa wallet.
 
 Day to day I'm in Swift and SwiftUI, still comfortable in UIKit, and I care more about
