@@ -3,150 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Aydın Can Tuntaş - Senior iOS Developer Portfolio</title>
-    
+    <title>Aydın Can Tuntaş — Senior iOS Developer</title>
+
     <!-- Meta Tags for SEO -->
     <meta name="description" content="Senior iOS Developer specializing in Fintech, Crypto, and High-Performance Mobile Applications. Expert in Swift, SwiftUI, and UIKit.">
     <meta name="keywords" content="iOS Developer, Swift, SwiftUI, Fintech, Crypto, Mobile App Development, Senior Developer, Portfolio">
     <meta name="author" content="Aydın Can Tuntaş">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#05060a">
 
     <!-- Open Graph / LinkedIn / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://actuntas.github.io/">
-    <meta property="og:title" content="Aydın Can Tuntaş - Senior iOS Developer">
+    <meta property="og:title" content="Aydın Can Tuntaş — Senior iOS Developer">
     <meta property="og:description" content="Explore the portfolio of a Senior iOS Developer specializing in high-performance fintech and crypto applications.">
     <meta property="og:image" content="ben.jpg">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Aydın Can Tuntaş - Senior iOS Developer">
+    <meta name="twitter:title" content="Aydın Can Tuntaş — Senior iOS Developer">
     <meta name="twitter:description" content="Senior iOS Developer portfolio. Swift, SwiftUI, Fintech expert.">
     <meta name="twitter:image" content="ben.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <img src="ben.jpg" alt="Aydın Can Tuntaş" class="profile-img">
-            <h1>Aydın Can Tuntaş</h1>
-            <div class="title">Senior iOS Developer</div>
-            
+    <!-- Ambient background glow -->
+    <div class="bg-aurora" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#top" class="nav-logo">AC<span>.</span></a>
+            <div class="nav-links">
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <a href="mailto:actuntas@gmail.com" class="nav-cta">Get in touch</a>
+        </div>
+    </nav>
+
+    <main class="container" id="top">
+
+        <!-- Hero -->
+        <header class="hero" id="hero">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span> Available for new opportunities
+            </div>
+
+            <img src="ben.jpg" alt="Aydın Can Tuntaş" class="profile-img" width="140" height="140">
+
+            <h1 class="hero-title">Aydın Can Tuntaş</h1>
+            <div class="hero-role">Senior iOS Developer <span class="role-accent">&amp; Team Lead</span></div>
+
             <p class="bio">
-                Experienced iOS Developer with a strong background in fintech and crypto applications. 
-                Passionate about building high-performance, user-friendly mobile experiences using Swift and modern iOS frameworks. 
-                Focusing on technical excellence and innovative solutions with team leadership experience.
+                Senior iOS developer with 6+ years in fintech and crypto. I modernise legacy
+                codebases into clean SwiftUI architectures, ship 99%+ crash-free apps, and lead
+                iOS teams — building secure, high-performance mobile experiences.
             </p>
+
+            <div class="hero-actions">
+                <a href="#work" class="btn btn-primary">View my work</a>
+                <a href="assets/can_tuntas_cv.pdf" download class="btn btn-ghost">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download CV
+                </a>
+            </div>
 
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/cantuntas" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
                 </a>
                 <a href="https://github.com/actuntas" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
                 </a>
+                <a href="mailto:actuntas@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Stats strip -->
+            <div class="stats" id="stats">
+                <div class="stat">
+                    <span class="stat-num">6+</span>
+                    <span class="stat-label">Years experience</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat">
+                    <span class="stat-num">99%+</span>
+                    <span class="stat-label">Crash-free sessions</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat">
+                    <span class="stat-num">5+</span>
+                    <span class="stat-label">iOS apps shipped</span>
+                </div>
             </div>
         </header>
 
-        <div class="portfolio-grid">
-
-            <div class="project-card" data-project="icrypex">
-                <div class="screenshot-container">
-                    <img src="assets/icrypex/main.webp" alt="ICRYPEX" loading="lazy">
-                </div>
-                <div class="card-info">
-                    <h3>ICRYPEX</h3>
-                    <p>Professional cryptocurrency exchange. Successfully migrated the legacy Objective-C codebase to a modern SwiftUI architecture, implementing Async/Await for concurrency and a secure KYC verification system.</p>
-                    <div class="tech-stack">
-                        <span>SwiftUI</span>
-                        <span>Async/Await</span>
-                        <span>WebSocket</span>
-                        <span>KYC</span>
-                        <span>Migration</span>
-                    </div>
-                </div>
+        <!-- Work -->
+        <section class="section" id="work">
+            <div class="section-head reveal">
+                <span class="section-eyebrow">Selected Work</span>
+                <h2 class="section-title">Apps I've helped build</h2>
+                <p class="section-sub">Production apps across crypto exchanges, digital wallets and live-streaming. Tap any card to explore the screens.</p>
             </div>
 
-            <div class="project-card" data-project="coino">
-                <div class="screenshot-container">
-                    <img src="assets/CoinO/main.webp" alt="Coino" loading="lazy">
+            <div class="portfolio-grid">
+
+                <div class="project-card reveal" data-project="icrypex">
+                    <div class="screenshot-container">
+                        <img src="assets/icrypex/main.webp" alt="ICRYPEX" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-top">
+                            <h3>ICRYPEX</h3>
+                            <span class="card-tag">Crypto Exchange</span>
+                        </div>
+                        <p>Professional cryptocurrency exchange. Migrated the legacy Objective-C codebase to a modern SwiftUI architecture, implementing Async/Await for concurrency and a secure KYC verification system.</p>
+                        <div class="tech-stack">
+                            <span>SwiftUI</span>
+                            <span>Async/Await</span>
+                            <span>WebSocket</span>
+                            <span>KYC</span>
+                            <span>Migration</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-info">
-                    <h3>Coino</h3>
-                    <p>A leading Turkish cryptocurrency exchange platform. Developed a robust and secure mobile experience featuring real-time market data visualization and seamless trading. Integrated Sumsub for secure identity verification (KYC).</p>
-                    <div class="tech-stack">
+
+                <div class="project-card reveal" data-project="coino">
+                    <div class="screenshot-container">
+                        <img src="assets/CoinO/main.webp" alt="Coino" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-top">
+                            <h3>Coino</h3>
+                            <span class="card-tag">Crypto Exchange</span>
+                        </div>
+                        <p>A leading Turkish cryptocurrency exchange platform. Built a robust, secure mobile experience with real-time market data visualization and seamless trading. Integrated Sumsub for secure identity verification (KYC).</p>
+                        <div class="tech-stack">
+                            <span>Swift</span>
+                            <span>UIKit</span>
+                            <span>RxSwift</span>
+                            <span>WebSocket</span>
+                            <span>Sumsub KYC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-project="trive">
+                    <div class="screenshot-container">
+                        <img src="assets/trive/main.png" alt="Trive" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-top">
+                            <h3>Trive</h3>
+                            <span class="card-tag">Investing</span>
+                        </div>
+                        <p>Investment and trading platform. Designed and developed a standalone iOS Onboarding &amp; KYC SDK integrated into the main app, using Fourthline for biometric identity verification.</p>
+                        <div class="tech-stack">
+                            <span>UIKit</span>
+                            <span>SDK Development</span>
+                            <span>Fourthline</span>
+                            <span>KYC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-project="kassa">
+                    <div class="screenshot-container">
+                        <img src="assets/kassa/main.png" alt="Kassa" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-top">
+                            <h3>Kassa</h3>
+                            <span class="card-tag">Digital Wallet</span>
+                        </div>
+                        <p>A comprehensive digital wallet and finance app backed by QNB Finansbank. Features budget tracking, peer-to-peer money transfers, expense splitting, and a real-time social chat interface.</p>
+                        <div class="tech-stack">
+                            <span>UIKit</span>
+                            <span>WebSocket</span>
+                            <span>Real-time Chat</span>
+                            <span>Fintech</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-project="ulive">
+                    <div class="screenshot-container">
+                        <img src="assets/ulive/main.png" alt="Urban Active+" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-top">
+                            <h3>Urban Active+</h3>
+                            <span class="card-tag">Live Streaming</span>
+                        </div>
+                        <p>Interactive fitness application offering live-streamed classes and video content. Built with SwiftUI and advanced video streaming APIs to deliver high-quality real-time workout experiences.</p>
+                        <div class="tech-stack">
+                            <span>SwiftUI</span>
+                            <span>Video Stream APIs</span>
+                            <span>Live Streaming</span>
+                            <span>Interactive</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section" id="skills">
+            <div class="section-head reveal">
+                <span class="section-eyebrow">Toolbox</span>
+                <h2 class="section-title">Skills &amp; expertise</h2>
+                <p class="section-sub">The languages, frameworks and practices I reach for when shipping production iOS apps.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-group reveal">
+                    <h4>Languages</h4>
+                    <div class="chips">
                         <span>Swift</span>
-                        <span>UIKit</span>
-                        <span>RxSwift</span>
-                        <span>WebSocket</span>
-                        <span>Sumsub KYC</span>
+                        <span>Objective-C</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="project-card" data-project="trive">
-                <div class="screenshot-container">
-                    <img src="assets/trive/main.png" alt="Trive" loading="lazy">
-                </div>
-                <div class="card-info">
-                    <h3>Trive</h3>
-                    <p>Investment and trading platform. Designed and developed a standalone iOS Onboarding & KYC SDK integrated into the main app, utilizing Fourthline for biometric identity verification.</p>
-                    <div class="tech-stack">
-                        <span>UIKit</span>
-                        <span>SDK Development</span>
-                        <span>Fourthline</span>
-                        <span>KYC</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-project="kassa">
-                <div class="screenshot-container">
-                    <img src="assets/kassa/main.png" alt="Kassa" loading="lazy">
-                </div>
-                <div class="card-info">
-                    <h3>Kassa</h3>
-                    <p>A comprehensive digital wallet and finance app backed by QNB Finansbank. Features include budget tracking, peer-to-peer money transfers, expense splitting, and a real-time social chat interface.</p>
-                    <div class="tech-stack">
-                        <span>UIKit</span>
-                        <span>WebSocket</span>
-                        <span>Real-time Chat</span>
-                        <span>Fintech</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-project="ulive">
-                <div class="screenshot-container">
-                    <img src="assets/ulive/main.png" alt="Urban Active+" loading="lazy">
-                </div>
-                <div class="card-info">
-                    <h3>Urban Active+</h3>
-                    <p>Interactive fitness application offering live-streamed classes and video content. Built with SwiftUI, utilizing advanced video streaming APIs to deliver high-quality real-time workout experiences.</p>
-                    <div class="tech-stack">
+                <div class="skill-group reveal">
+                    <h4>UI &amp; Frameworks</h4>
+                    <div class="chips">
                         <span>SwiftUI</span>
-                        <span>Video Stream APIs</span>
-                        <span>Live Streaming</span>
-                        <span>Interactive</span>
+                        <span>UIKit</span>
+                        <span>Combine</span>
+                        <span>Swift Concurrency</span>
+                        <span>RxSwift</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h4>Architecture</h4>
+                    <div class="chips">
+                        <span>MVVM</span>
+                        <span>Clean Architecture</span>
+                        <span>Clean Swift</span>
+                        <span>VIPER</span>
+                        <span>SDK Development</span>
+                        <span>Modularization</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h4>Networking &amp; Debugging</h4>
+                    <div class="chips">
+                        <span>REST APIs</span>
+                        <span>WebSockets</span>
+                        <span>Charles Proxy</span>
+                        <span>Instruments</span>
+                        <span>Crashlytics</span>
+                        <span>Firebase</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h4>Fintech &amp; Security</h4>
+                    <div class="chips">
+                        <span>Keychain</span>
+                        <span>Face ID / Touch ID</span>
+                        <span>KYC / AML</span>
+                        <span>Secure Transactions</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h4>Practices</h4>
+                    <div class="chips">
+                        <span>Legacy Migration</span>
+                        <span>Release Management</span>
+                        <span>TestFlight</span>
+                        <span>Git</span>
+                        <span>Agile</span>
+                        <span>AI-assisted Dev</span>
+                        <span>Team Leadership</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-        </div>
+        <!-- Contact -->
+        <section class="section contact" id="contact">
+            <div class="contact-card reveal">
+                <span class="section-eyebrow">Contact</span>
+                <h2 class="contact-title">Let's build something great.</h2>
+                <p class="contact-sub">Open to senior iOS roles, contracts and interesting fintech problems. The fastest way to reach me is email.</p>
+                <div class="hero-actions">
+                    <a href="mailto:actuntas@gmail.com" class="btn btn-primary">actuntas@gmail.com</a>
+                    <a href="assets/can_tuntas_cv.pdf" download class="btn btn-ghost">Download CV</a>
+                </div>
+            </div>
+        </section>
 
         <footer>
-            <p>2025 - <a href="mailto:actuntas@gmail.com">actuntas@gmail.com</a></p>
+            <span>© <span id="year">2025</span> Aydın Can Tuntaş</span>
+            <a href="mailto:actuntas@gmail.com">actuntas@gmail.com</a>
         </footer>
-    </div>
+    </main>
 
-    <div id="project-modal" class="modal" role="dialog" aria-modal="true">
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 id="modal-title" class="modal-title">Project Details</h2>

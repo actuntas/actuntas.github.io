@@ -107,6 +107,53 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    /* ---------- Navbar: shrink on scroll ---------- */
+    const navbar = document.getElementById('navbar');
+    const onScroll = () => {
+        if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 20);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------- Scroll reveal ---------- */
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    // subtle stagger for siblings entering together
+                    entry.target.style.transitionDelay = `${Math.min(i, 4) * 60}ms`;
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(el => revealObserver.observe(el));
+    } else {
+        revealEls.forEach(el => el.classList.add('visible'));
+    }
+
+    /* ---------- Active nav link on scroll ---------- */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    if ('IntersectionObserver' in window && sections.length) {
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+                }
+            });
+        }, { threshold: 0.4 });
+        sections.forEach(sec => navObserver.observe(sec));
+    }
+
+    /* ---------- Current year ---------- */
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
     closeModalButton.addEventListener('click', closeModal);
 
     // Close modal when clicking outside the content

@@ -1,37 +1,15 @@
-# Aydın Can Tuntaş - iOS Developer Portfolio
+# Aydın Can Tuntaş
 
-Welcome to my personal portfolio repository. This project showcases my experience in building high-performance iOS applications, particularly in the **Fintech** and **Crypto** sectors.
+Senior iOS developer, based in İzmir. I've spent the last 6 years mostly around fintech
+and crypto — the kind of apps where a crash costs someone money, so stability matters.
 
-🔗 **Live Portfolio:** [actuntas.github.io](https://actuntas.github.io/)
+Some of what I've worked on: rebuilding ICRYPEX's exchange app from Objective-C to
+SwiftUI, taking over CoinO's messy legacy codebase and getting it to 99%+ crash-free,
+an onboarding SDK for Trive, and the Kassa wallet.
 
-## 👨‍💻 About Me
+Day to day I'm in Swift and SwiftUI, still comfortable in UIKit, and I care more about
+clean architecture and readable code than chasing every new trend.
 
-I am an experienced **Senior iOS Developer** and **Team Lead** with a deep passion for creating seamless mobile experiences. My expertise lies in migrating legacy codebases to modern architectures, building secure financial applications, and developing robust SDKs.
+This repo is just my portfolio site — hand-written HTML, CSS and a bit of JS.
 
-*   **Core Technologies:** Swift, SwiftUI, UIKit, Combine, RxSwift, Async/Await.
-*   **Focus:** Real-time Data (WebSockets), Security (KYC/AML), Performance Optimization, Architecture (MVVM, Clean Architecture).
-
-## 🚀 Projects Showcased
-
-*   **ICRYPEX:** Crypto Exchange (SwiftUI Migration, Async/Await).
-*   **Coino:** Turkish Crypto Exchange (Real-time data, Sumsub KYC).
-*   **Trive:** Investment Platform (Onboarding & KYC SDK with Fourthline).
-*   **Kassa:** Digital Wallet & Social Finance (QNB Finansbank backed).
-*   **Urban Active+:** Live Streaming Fitness App (Video Stream APIs).
-
-## 🛠️ Tech Stack (Portfolio Site)
-
-This portfolio website is built with performance and simplicity in mind:
-
-*   **HTML5** (Semantic structure)
-*   **CSS3** (Custom properties, Flexbox/Grid, Dark Mode)
-*   **JavaScript** (ES6+, Lazy Loading)
-*   **Responsive Design** (Mobile-first approach)
-
-## 📬 Contact
-
-*   **Email:** [actuntas@gmail.com](mailto:actuntas@gmail.com)
-*   **LinkedIn:** [linkedin.com/in/cantuntas](https://www.linkedin.com/in/cantuntas)
-
----
-2025 - Aydın Can Tuntaş
+actuntas@gmail.com · [LinkedIn](https://www.linkedin.com/in/cantuntas) · [actuntas.github.io](https://actuntas.github.io/)
