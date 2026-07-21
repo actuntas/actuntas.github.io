@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Project Data Configuration
     const projectData = {
         coino: {
             name: 'Coino - Crypto Exchange',
@@ -57,49 +56,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // DOM Elements
     const modal = document.getElementById('project-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalImagesContainer = document.getElementById('modal-images');
     const closeModalButton = document.getElementById('close-modal-button');
     const projectCards = document.querySelectorAll('.project-card');
 
-    // Functions
     const openModal = (projectName) => {
         const project = projectData[projectName];
         if (!project) return;
 
         modalTitle.textContent = project.name;
-        modalImagesContainer.innerHTML = ''; // Clear previous images
+        modalImagesContainer.innerHTML = '';
 
-        // Create images with lazy loading
         const fragment = document.createDocumentFragment();
         project.images.forEach((imageSrc, index) => {
             const img = document.createElement('img');
             img.src = imageSrc;
             img.alt = `${project.name} Screenshot ${index + 1}`;
-            img.loading = 'lazy'; // Improve performance
+            img.loading = 'lazy';
             fragment.appendChild(img);
         });
         
         modalImagesContainer.appendChild(fragment);
 
         modal.style.display = 'flex';
-        // Trigger reflow for transition
         void modal.offsetWidth;
         modal.classList.add('show');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        document.body.style.overflow = 'hidden';
     };
 
     const closeModal = () => {
         modal.classList.remove('show');
-        document.body.style.overflow = ''; // Restore scrolling
+        document.body.style.overflow = '';
         setTimeout(() => {
             modal.style.display = 'none';
-        }, 300); // Wait for transition
+        }, 300);
     };
 
-    // Event Listeners
     projectCards.forEach(card => {
         card.addEventListener('click', () => {
             const projectName = card.getAttribute('data-project');
@@ -107,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ---------- Navbar: shrink on scroll ---------- */
     const navbar = document.getElementById('navbar');
     const onScroll = () => {
         if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 20);
@@ -115,13 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    /* ---------- Scroll reveal ---------- */
     const revealEls = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry, i) => {
                 if (entry.isIntersecting) {
-                    // subtle stagger for siblings entering together
                     entry.target.style.transitionDelay = `${Math.min(i, 4) * 60}ms`;
                     entry.target.classList.add('visible');
                     revealObserver.unobserve(entry.target);
@@ -133,33 +124,35 @@ document.addEventListener('DOMContentLoaded', () => {
         revealEls.forEach(el => el.classList.add('visible'));
     }
 
-    /* ---------- Active nav link on scroll ---------- */
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-    if ('IntersectionObserver' in window && sections.length) {
-        const navObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id');
-                    navLinks.forEach(link => {
-                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-                    });
-                }
+    if (sections.length && navLinks.length) {
+        const setActive = (id) => {
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
             });
-        }, { threshold: 0.4 });
-        sections.forEach(sec => navObserver.observe(sec));
+        };
+        const onSpy = () => {
+            const line = window.scrollY + window.innerHeight * 0.3;
+            let currentId = null;
+            sections.forEach(sec => {
+                if (sec.offsetTop <= line) currentId = sec.getAttribute('id');
+            });
+            setActive(currentId);
+        };
+        window.addEventListener('scroll', onSpy, { passive: true });
+        window.addEventListener('resize', onSpy);
+        onSpy();
     }
 
     closeModalButton.addEventListener('click', closeModal);
 
-    // Close modal when clicking outside the content
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
             closeModal();
         }
     });
     
-    // Keyboard Navigation
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && modal.style.display === 'flex') {
             closeModal();
